@@ -1,0 +1,16 @@
+
+.touch:active {
+  transform: scale(0.95) translateY(5%);
+  transition: 0.05s;
+}
+
+.fixRight {
+  display: block;
+  right: 0.8%;
+  left: auto;
+  border-radius: 0px;
+  background-color: #FFF1DE;
+  border: 3px solid #664300
+}
+
+
