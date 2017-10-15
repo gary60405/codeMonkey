@@ -1,0 +1,133 @@
+.map {
+  position: absolute;
+  top: -57px;
+  left: 0;
+  width:100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  background-image: url("./../../assets/modal.png");
+  background-repeat: no-repeat;
+  background-size: 1060px 622px;
+  background-position: 50% 50%;
+  z-index: 10000;
+}
+.selecter {
+  position: absolute;
+  top:50%;
+  left: 50%;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border-radius: 10000px;
+  background-color: #fff;
+  opacity: 0.2;
+}
+.selecter:hover {
+  opacity: 0;
+}
+
+#close {
+  width: 58px;
+  height: 58px;
+  transform: translate(470px, -310px)
+}
+
+#sel_0 {
+  transform: translate(-493px, 170px);
+}
+
+#sel_1 {
+  transform: translate(-300px, 143px);
+}
+
+#sel_2 {
+  transform: translate(-170px, 61px);
+}
+
+#sel_3 {
+  transform: translate(-268px, -45px);
+}
+
+#sel_4 {
+  transform: translate(-465px, -145px);
+}
+
+#sel_5 {
+  transform: translate(-297px, -229px);
+}
+
+#sel_6 {
+  transform: translate(-77px, -191px);
+}
+
+#sel_7 {
+  transform: translate(8px, -85px);
+}
+
+#sel_8 {
+  transform: translate(85px, 73px);
+}
+
+#sel_9{
+  transform: translate(231px, 146px);
+}
+#sel_10{
+  transform: translate(361px, 93px);
+}
+
+.level {
+  position: absolute;
+  top: -57px;
+  left: 0;
+  width:100vw;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.8);
+  background-image: url("./../../assets/star_3.png");
+  background-repeat: no-repeat;
+  background-size: 950px 597px;
+  background-position: 50% 50%;
+  z-index: 10000;
+}
+
+#reset {
+  position: absolute;
+  top: 480px;
+  left: 961px;
+  width: 201px;
+  height: 80px;
+  opacity: 0.15;
+  cursor: pointer;
+  background-color:#fff;
+}
+
+#reset:hover {
+  opacity: 0;
+}
+
+#next {
+  position: absolute;
+  top: 587px;
+  left: 958px;
+  width: 285px;
+  height: 100px;
+  cursor: pointer;
+  opacity: 0.15;
+  background-image: url('./../../assets/next.svg');
+  background-repeat: no-repeat;
+}
+
+#next:hover {
+  opacity: 0;
+}
+
+#current-level {
+  position: absolute;
+  top:98px;
+  font-family: "Comic MS";
+  left:676px;
+  color:#333;
+  font-size: 1.5rem;
+}
+
+
+
