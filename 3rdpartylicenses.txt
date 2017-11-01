@@ -24,6 +24,8 @@ THE SOFTWARE.
 
 node-blockly@1.0.26 ISC
 
+script-loader@0.7.0 MIT
+
 zone.js@0.8.17 MIT
 The MIT License
 
