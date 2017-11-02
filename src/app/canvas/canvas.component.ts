@@ -7,11 +7,17 @@ import { NotepadService } from '../notepad/notepad.service';
   styleUrls: ['./canvas.component.css']
 })
 export class CanvasComponent implements OnInit {
+  isMin: boolean;
+  isMax: boolean;
   currentLevel: number;
   displayLevaelPassing: string;
+
   constructor(public notepadService: NotepadService) { }
   number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   ngOnInit() {
+    this.isMin = eval('isMin()');
+    this.isMax = eval('isMax()');
+    console.log('good', this.isMin, this.isMax);
     let isPass = 0;
     setInterval(() => {
       // tslint:disable-next-line:no-eval
@@ -61,6 +67,24 @@ export class CanvasComponent implements OnInit {
     // tslint:disable-next-line:no-eval
     eval('diveLinker.Send([{"id":1506435020252, "value":' + number + '},{"id":1505892241566, "value":' + number + '}]);');
 
+  }
+
+  nextBlock() {
+    // tslint:disable-next-line:no-eval
+    eval('addCurrentNum()');
+    // tslint:disable-next-line:no-eval
+    this.isMax = eval('isMax()');
+    // tslint:disable-next-line:no-eval
+    this.isMin = eval('isMin()');
+  }
+
+  lastBlock() {
+    // tslint:disable-next-line:no-eval
+    eval('subCurrentNum()');
+    // tslint:disable-next-line:no-eval
+    this.isMax = eval('isMax()');
+    // tslint:disable-next-line:no-eval
+    this.isMin = eval('isMin()');
   }
 
   onSelect(number: number) {

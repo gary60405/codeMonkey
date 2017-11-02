@@ -26,6 +26,34 @@
   opacity: 0;
 }
 
+.arrowLeft {
+  width: 50px;
+  position: absolute;
+  top: 45%;
+  left: 16%;
+  opacity: 0.8;
+  z-index: 100000;
+}
+
+.arrowLeft:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.arrowRight {
+  width: 50px;
+  position: absolute;
+  top: 45%;
+  right: 17%;
+  opacity: 0.8;
+  z-index: 100000;
+}
+
+.arrowRight:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
 #close {
   width: 58px;
   height: 58px;

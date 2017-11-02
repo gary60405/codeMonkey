@@ -1,4 +1,16 @@
+
+
 <div [ngStyle]="{'display': this.notepadService.display}" class="map">
+    <div [ngStyle]="{'display': this.isMin ? 'none' : 'block'}"
+         class="arrowLeft"
+         (click)="lastBlock()">
+      <img src="assets/arrowLeft.png" class="img-fluid" alt="">
+    </div>
+    <div [ngStyle]="{'display': !this.isMax ? 'none' : 'block'}"
+         class="arrowRight"
+         (click)="nextBlock()">
+      <img src="assets/arrowRight.png" class="img-fluid" alt="">
+    </div>
     <div id="close"
          class="selecter"
          (click)="onClose()"></div>
