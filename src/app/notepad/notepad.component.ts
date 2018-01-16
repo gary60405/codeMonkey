@@ -18,9 +18,12 @@ export class NotepadComponent implements OnInit {
 
   ngOnInit() {
     this.notepadService.init(this.toolBox);
+
   }
 
   onGenerate() {
+    // const dom = Blockly.Xml.blockToDom(this.toolBox.step);
+    // console.log(Blockly.Xml.domToText(dom));
     this.notepadService.getCode(this.getCode);
   }
 

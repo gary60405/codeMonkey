@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { NotepadComponent } from './notepad/notepad.component';
 import { CanvasComponent } from './canvas/canvas.component';
+import { ShareService } from './share/share.service';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CanvasComponent } from './canvas/canvas.component';
     BrowserModule,
     !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
-  providers: [NotepadService],
+  providers: [NotepadService,
+              ShareService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
