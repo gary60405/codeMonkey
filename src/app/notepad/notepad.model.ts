@@ -40,15 +40,30 @@ export class Toolbox {
         this.setHelpUrl('');
       }
   };
+  public turtle_step = {
+    init: function() {
+      this.appendDummyInput()
+          .appendField('烏龜走')
+          .appendField(new Blockly.FieldNumber(0, 0, 30), 'turtleStep')
+          .appendField('步');
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(230);
+   this.setTooltip('');
+   this.setHelpUrl('');
+    }
+  };
 }
 
 export class GetCode {
   public stepValue = (block) => {
-    const stepValue = block.getFieldValue('stepValue');
-    return 'step += ' + stepValue + ';\n';
+    const id = '1511104738945';
+    const value = block.getFieldValue('stepValue');
+    return `diveLinker.Send(${id}, ${value});`;
   }
   public angleValue = (block) => {
-    const angleValue = block.getFieldValue('angleValue');
-    return 'angle += ' + angleValue + ';\n';
+    const id = '1511104858728';
+    const value = block.getFieldValue('angleValue');
+    return `diveLinker.Send(${id}, ${value});`;
   }
 }

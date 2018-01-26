@@ -8,6 +8,7 @@ import { HeaderComponent } from './header/header.component';
 import { NotepadComponent } from './notepad/notepad.component';
 import { CanvasComponent } from './canvas/canvas.component';
 import { ShareService } from './share/share.service';
+import { CompileService } from './notepad/compile.service';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ShareService } from './share/share.service';
     !environment.production ? StoreDevtoolsModule.instrument() : []
   ],
   providers: [NotepadService,
-              ShareService],
+              ShareService,
+              CompileService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

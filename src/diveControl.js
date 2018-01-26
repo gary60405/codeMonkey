@@ -1,9 +1,6 @@
 let currentNum = 0;
 const diveAddress = [
-    "http://dive.nutn.edu.tw:8080/Experiment/kaleTestExperiment4.jsp?eid=3122",
-    "http://dive.nutn.edu.tw:8080/Experiment/kaleTestExperiment4.jsp?eid=3123",
-    "http://dive.nutn.edu.tw:8080/Experiment/kaleTestExperiment4.jsp?eid=3220",
-    "http://dive.nutn.edu.tw:8080/Experiment/kaleTestExperiment4.jsp?eid=3225",
+    "http://120.114.170.2:8080/Experiment/kaleTestExperiment5.jsp?eid=3154",
 ];
 function addCurrentNum() {
     if (isMax()) {
