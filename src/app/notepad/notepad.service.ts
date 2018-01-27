@@ -30,52 +30,47 @@ init(toolBox) {
   // console.log(Blockly.Xml.domToText(Blockly.Xml.workspaceToDom(this.workspace)));
     // tslint:disable-next-line:max-line-length
     const text = `<xml xmlns="http://www.w3.org/1999/xhtml">
-  <variables></variables>
-  <block type="grab" id="(@H,6dyaHbMPb@^NqQm%" x="195" y="105">
-    <next>
-      <block type="controls_repeat_ext" id="eKrvm)=u9:]YA$^zE07U">
-        <value name="TIMES">
-          <block type="math_number" id="Q_rcUC2Ub+44$})Ff-:c">
-            <field name="NUM">8</field>
-          </block>
-        </value>
-        <statement name="DO">
-          <block type="mouse_step" id="vx.YD[P*C_T:?Al~#b,p">
-            <field name="mouseStep">10</field>
-            <next>
-              <block type="grab" id="KT::BNz}F6?@~/z5Pm$%">
-                <next>
-                  <block type="mouse_turn" id=")ZUBtj7lzX~tm~clTR4P">
-                    <field name="monkeyTurn">180</field>
-                    <next>
-                      <block type="mouse_step" id="/1+^l(ysi5/R3)MV9ZX~">
-                        <field name="mouseStep">10</field>
-                        <next>
-                          <block type="drop" id="ZYGUu,^Wi/5g[wo\`5gwf">
-                            <next>
-                              <block type="mouse_turn" id=":}1vdF+MPn,{;{2oL^3b">
-                                <field name="monkeyTurn">180</field>
-                                <next>
-                                  <block type="mouse_turn" id="y6~AJ;_fjG]GK!$;)/)\`">
-                                    <field name="monkeyTurn">135</field>
-                                  </block>
-                                </next>
-                              </block>
-                            </next>
-                          </block>
-                        </next>
-                      </block>
-                    </next>
-                  </block>
-                </next>
-              </block>
-            </next>
-          </block>
-        </statement>
-      </block>
-    </next>
-  </block>
-</xml>`;
+    <variables></variables>
+    <block type="grab" id="(@H,6dyaHbMPb@^NqQm%" x="195" y="105">
+      <next>
+        <block type="controls_repeat_ext" id="eKrvm)=u9:]YA$^zE07U">
+          <value name="TIMES">
+            <block type="math_number" id="Q_rcUC2Ub+44$})Ff-:c">
+              <field name="NUM">8</field>
+            </block>
+          </value>
+          <statement name="DO">
+            <block type="mouse_step" id="vx.YD[P*C_T:?Al~#b,p">
+              <field name="mouseStep">10</field>
+              <next>
+                <block type="grab" id="KT::BNz}F6?@~/z5Pm$%">
+                  <next>
+                    <block type="mouse_turn" id=")ZUBtj7lzX~tm~clTR4P">
+                      <field name="monkeyTurn">180</field>
+                      <next>
+                        <block type="mouse_step" id="/1+^l(ysi5/R3)MV9ZX~">
+                          <field name="mouseStep">10</field>
+                          <next>
+                            <block type="drop" id="ZYGUu,^Wi/5g[wo\`5gwf">
+                              <next>
+                                <block type="mouse_turn" id="y6~AJ;_fjG]GK!$;)/)\`">
+                                  <field name="monkeyTurn">135</field>
+                                </block>
+                              </next>
+                            </block>
+                          </next>
+                        </block>
+                      </next>
+                    </block>
+                  </next>
+                </block>
+              </next>
+            </block>
+          </statement>
+        </block>
+      </next>
+    </block>
+  </xml>`;
     const xml = Blockly.Xml.textToDom(text);
     Blockly.Xml.appendDomToWorkspace(xml, this.workspace);
 }
