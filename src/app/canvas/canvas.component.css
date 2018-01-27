@@ -106,7 +106,7 @@
 .level {
   position: absolute;
   top: -57px;
-  left: 0;
+  left: 0px;
   width:100vw;
   height: 100vh;
   background-color: rgba(0,0,0,0.8);
@@ -119,8 +119,8 @@
 
 #reset {
   position: absolute;
-  top: 480px;
-  left: 961px;
+  top: 65vh;
+  left: 65vw;
   width: 201px;
   height: 80px;
   opacity: 0.15;
@@ -134,8 +134,8 @@
 
 #next {
   position: absolute;
-  top: 587px;
-  left: 958px;
+  top: 82vh;
+  left: 65vw;
   width: 285px;
   height: 100px;
   cursor: pointer;
@@ -150,9 +150,9 @@
 
 #current-level {
   position: absolute;
-  top:98px;
+  top:4vh;
   font-family: "Comic MS";
-  left:676px;
+  left:43vw;
   color:#333;
   font-size: 1.5rem;
 }

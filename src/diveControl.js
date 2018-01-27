@@ -1,6 +1,7 @@
 let currentNum = 0;
 const diveAddress = [
-    "http://120.114.170.2:8080/Experiment/kaleTestExperiment5.jsp?eid=3154",
+    "http://120.114.170.2:8080/Experiment/kaleTestExperiment5.jsp?eid=3402",
+    "http://120.114.170.2:8080/Experiment/kaleTestExperiment5.jsp?eid=3154"
 ];
 function addCurrentNum() {
     if (isMax()) {

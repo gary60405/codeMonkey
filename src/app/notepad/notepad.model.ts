@@ -9,10 +9,10 @@ export class Toolbox {
                         <block type="monkey_turn"></block>
                       </category>
                       <category name="老鼠抓火柴">
-                        <block type="turtle_step"></block>
-                        <block type="turtle_turn"></block>
-                        <block type="monkey_step"></block>
-                        <block type="monkey_turn"></block>
+                        <block type="mouse_step"></block>
+                        <block type="mouse_turn"></block>
+                        <block type="grab"></block>
+                        <block type="drop"></block>
                         <block type="math_number"></block>
                         <block type="controls_repeat_ext"></block>
                       </category>
@@ -74,6 +74,58 @@ export class Toolbox {
         this.setHelpUrl('');
     }
   };
+  public mouse_step = {
+    init:
+      function() {
+        this.appendDummyInput()
+            .appendField('老鼠走')
+            .appendField(new Blockly.FieldNumber(0, 0, 30), 'mouseStep')
+            .appendField('步');
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip('');
+        this.setHelpUrl('');
+    }
+  };
+  public mouse_turn = {
+    init:
+      function() {
+        this.appendDummyInput()
+            .appendField('老鼠轉')
+            .appendField(new Blockly.FieldAngle(0), 'monkeyTurn')
+            .appendField('度');
+        this.setPreviousStatement(true, null);
+        this.setNextStatement(true, null);
+        this.setColour(230);
+        this.setTooltip('');
+        this.setHelpUrl('');
+    }
+  };
+  public grab = {
+    init:
+     function() {
+      this.appendDummyInput()
+          .appendField('拿火柴');
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(230);
+   this.setTooltip('');
+   this.setHelpUrl('');
+    }
+  };
+  public drop = {
+    init:
+     function() {
+      this.appendDummyInput()
+          .appendField('放火柴');
+      this.setPreviousStatement(true, null);
+      this.setNextStatement(true, null);
+      this.setColour(230);
+   this.setTooltip('');
+   this.setHelpUrl('');
+    }
+  };
 }
 
 export class GetCode {
@@ -96,5 +148,13 @@ export class GetCode {
     const id = '1511104858728';
     const value = block.getFieldValue('monkeyTurn');
     return `diveLinker.Send(${id}, ${value});`;
+  }
+  public grab = (block) => {
+    const id = '1516696065727';
+    return `diveLinker.Send(${id}, 1);`;
+  }
+  public drop = (block) => {
+    const id = '1516696065727';
+    return `diveLinker.Send(${id}, 0);`;
   }
 }

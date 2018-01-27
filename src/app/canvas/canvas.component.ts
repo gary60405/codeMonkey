@@ -10,30 +10,32 @@ export class CanvasComponent implements OnInit {
   isMin: boolean;
   isMax: boolean;
   currentLevel: number;
-  displayLevaelPassing: string;
+  displayLevaelPassing = 'none';
 
   constructor(public notepadService: NotepadService) { }
   number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   ngOnInit() {
+    // tslint:disable-next-line:no-eval
     this.isMin = eval('isMin()');
+    // tslint:disable-next-line:no-eval
     this.isMax = eval('isMax()');
-    console.log('good', this.isMin, this.isMax);
-    let isPass = 0;
-    setInterval(() => {
-      // tslint:disable-next-line:no-eval
-      isPass = eval('diveLinker.Get(1507359699948)');
-      console.log(isPass);
-      if (isPass === 1) {
-        this.displayLevaelPassing = 'block';
-      } else {
-        this.displayLevaelPassing = 'none';
-      }
-    }, 500);
-
-    setTimeout(() => {
-      // tslint:disable-next-line:no-eval
-      this.currentLevel = eval('diveLinker.Get(1506435020252)');
-    }, 2500);
+    let isPass = '0';
+    // let isBanana = 0;
+    this.notepadService.checkSubject
+      .subscribe(() => {
+        // tslint:disable-next-line:no-eval
+        isPass = eval('diveLinker.Get(1516179390106)');
+        if (isPass === '1') {
+          this.displayLevaelPassing = 'block';
+        } else {
+          this.displayLevaelPassing = 'none';
+        }
+      });
+    this.currentLevel = 1;
+    // setTimeout(() => {
+    //   // tslint:disable-next-line:no-eval
+    //   this.currentLevel = eval('diveLinker.Get(1506435020252)');
+    // }, 2500);
   }
 
   onClose() {
@@ -55,10 +57,12 @@ export class CanvasComponent implements OnInit {
       this.currentLevel = 1;
     }
     this.displayLevaelPassing = 'none';
-    // tslint:disable-next-line:max-line-length
-    const code = 'diveLinker.Send([{"id":1507359699948, "value":0}, {"id":1506435020252, "value":' + this.currentLevel + '},{"id":1505892241566, "value":' + this.currentLevel + '}]);';
     // tslint:disable-next-line:no-eval
-    eval(code);
+    eval('addCurrentNum()');
+    // tslint:disable-next-line:no-eval
+    this.isMax = eval('isMax()');
+    // tslint:disable-next-line:no-eval
+    this.isMin = eval('isMin()');
   }
 
   onChange(number: number) {
